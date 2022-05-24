@@ -1,14 +1,46 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="utf-8">
-<title>锅服官网</title>
+    <meta charset="utf-8">
+    <title>锅服官网</title>
+    <style type="text/css">
+        .div1,div{
+            width: 1350px;
+            margin:0 auto;
+        }
+    </style>
 </head>
 <body>
-    <h1>这里是捐虚锅之生存服务器（简称锅服）的官网</h1>
-    <h6>请不要相信其他的官网，都是假的！！！</h6>
-    <p>QQ群：318590889</p>
-    <p>开黑啦链接：https://kaihei.co/Jrcanh</p>
-    <h5>注：加入后下拉，找到“常驻服务器”，打开“捐虚锅之生存服务器”</h5>
+  <h1>这里是捐虚锅之生存服务器（简称锅服）的官网</h1>
+  <h6>请不要相信其他的官网，都是假的！！！</h6>
+  <p>QQ群：318590889</p>
+  <p>服务器只支持英文昵称</p>
+  <p>开黑啦链接：https://kaihei.co/Jrcanh</p>
+  <h5>注：加入后下拉，找到“常驻服务器”，打开“捐虚锅之生存服务器”</h5>
+  <p>下面是评论区QwQ</p>
+    <div class="div1" id="div1">
+        <!-- 创建昵称和留言文本框 -->
+        <span>游戏昵称：</span><input type="text" id="user" name="user">
+        <br>
+        <span>留言：</span><textarea id="lang"></textarea><br>
+        <!-- 创建提交评价按钮 -->
+        <input type="button" value="提交评价" id="btn">
+    </div>
 </body>
+<script type="text/javascript">
+    //通过id属性查找标签节点
+    var user=document.getElementById('user');
+    var lang=document.getElementById('lang');
+    //通过id属性查找提交评价按钮并绑定点击事件
+    document.getElementById('btn').onclick=function(){
+        //在html代码中创建一个div盒子
+        var cont=document.createElement('div');
+        //将获取到的数据，放到一创建好的盒子中
+        cont.innerHTML='<p>'+user.value+':'+lang.value+'</p><hr>';
+        //将创建好的div盒子及及内容显示在页面中
+        document.getElementById('div1').appendChild(cont);
+        user.value='';
+        lang.value='';
+    }
+</script>
 </html>
